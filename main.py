@@ -38,7 +38,7 @@ def f1_score_metric(y_true, y_pred):
 def load_trained_model():
     try:
        # Now load the model with the custom function
-        model = load_model(r'C:\Users\16307\Desktop\Cap2\hrl_hi_model1.keras',custom_objects={'f1_score_metric': f1_score_metric})
+        model = load_model(r'hrl_hi_model1.keras',custom_objects={'f1_score_metric': f1_score_metric})
 
         return model
     except Exception as e:
