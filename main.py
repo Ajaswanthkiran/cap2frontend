@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 from PIL import Image
 
+
 # Set page configuration
 st.set_page_config(page_title="Parkinson's Detection", page_icon="🧠", layout="wide")
 
@@ -13,6 +14,8 @@ st.set_page_config(page_title="Parkinson's Detection", page_icon="🧠", layout=
 precision = tf.keras.metrics.Precision()
 recall = tf.keras.metrics.Recall()
 
+
+#userdefined f1 score
 def f1_score_metric(y_true, y_pred):
     # Update the state of the metrics with the current batch
     precision.update_state(y_true, y_pred)
